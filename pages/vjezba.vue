@@ -23,7 +23,24 @@
       <ul>
         <li v-for="guest in guests" :key="guest">{{guest}}</li>
       </ul>
+      <button @click="sayHi">Click me to say HI!</button>
     </div>
+
+    <p>I want my box to be:</p>
+    <Label>
+      Red
+      <input type="radio" name="boxColor" v-model="boxColor" value="red">
+    </Label>
+    <Label>
+      Green
+      <input type="radio" name="boxColor" v-model="boxColor" value="green">
+    </Label>
+    <Label>
+      Blue
+      <input type="radio" name="boxColor" v-model="boxColor" value="blue">
+    </Label>
+
+    <div class="box" :style="{'background-color' : boxColor}"></div>
   </section>
 </template>
 
@@ -34,7 +51,8 @@ export default {
       firstName: "",
       lastName: "",
       age: undefined,
-      guests: ["Ivan", "Marko", "Mario", "Ivana"]
+      guests: ["Ivan", "Marko", "Mario", "Ivana"],
+      boxColor: "red"
     };
   },
   computed: {
@@ -46,6 +64,11 @@ export default {
     fullName(newName) {
       console.log("Full name changed to", newName);
     }
+  },
+  methods: {
+    sayHi() {
+      alert("Hi " + this.fullName);
+    }
   }
 };
 </script>
@@ -54,5 +77,11 @@ export default {
 .container {
   max-width: 1000px;
   padding: 2ch;
+}
+.box {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  margin-top: 15px;
 }
 </style>
