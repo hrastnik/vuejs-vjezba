@@ -1,22 +1,16 @@
-# CoolVjezba
+# Vue JS vježba
 
-> My cat&#39;s meow Nuxt.js project
+Za pokretanje projekta pokrenuti ovu naredbu u direktoriju projekta
 
-## Build Setup
+> npm install
 
-``` bash
-# install dependencies
-$ npm install
+Nakon instalacije svih paketa pokrenuti
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+> npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm start
+Preporučeni alati:
 
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+- VS Code
+- Ekstenzije za VSCode
+  - Vetur - za olakšavanje programiranja u VueJS (boje, snippeti...)
+  - Prettier - za formatiranje koda (možete u settings-ima od VSCode-a uključiti opciju "Format on save...")
